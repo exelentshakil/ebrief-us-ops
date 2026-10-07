@@ -13,8 +13,8 @@ interface BackboneStat {
 
 const STATS: BackboneStat[] = [
   {
-    value: '$42.8M',
-    label: 'in audited commercial sponsorship inventory under management',
+    value: '48.2M',
+    label: 'secure court pages and litigation exhibits indexed',
     color: '#533AFD',
     sparkline: [
       { t: 'Q1', v: 22.4 },
@@ -39,8 +39,8 @@ const STATS: BackboneStat[] = [
     ],
   },
   {
-    value: '99.4%',
-    label: 'contract obligation delivery rate across stadium and broadcast events',
+    value: '99.9%',
+    label: 'PII redaction and HIPAA compliance accuracy across US state and federal filings',
     color: '#D97706',
     domain: [97.5, 100],
     sparkline: [
@@ -49,12 +49,12 @@ const STATS: BackboneStat[] = [
       { t: 'W3', v: 98.7 },
       { t: 'W4', v: 99.6 },
       { t: 'W5', v: 99.1 },
-      { t: 'W6', v: 99.4 },
+      { t: 'W6', v: 99.9 },
     ],
   },
   {
-    value: '4.8 min',
-    label: 'average turnaround from asset intake to client-ready pitch deck',
+    value: '4.8 sec',
+    label: 'average turnaround from raw PDF ingestion to stamped court-ready exhibit bundle',
     color: '#0d9488',
     domain: [0, 52],
     sparkline: [
@@ -81,10 +81,10 @@ export function BackboneStats() {
         {/* Centered H2 Title with Stripe Opacity Hierarchy */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-[-0.025em] text-[var(--color-text-primary)]">
-            The backbone of modern commercial sponsorship
+            The backbone of modern legal document automation
           </h2>
           <p className="mt-2 text-base text-[#2E3C4E] dark:text-slate-300 leading-relaxed">
-            Connected AI agents delivering institutional valuation accuracy and zero missed deliverables at scale.
+            Connected AI agents delivering institutional compliance, sub-second indexing accuracy, and courtroom-ready briefs at scale.
           </p>
         </div>
 

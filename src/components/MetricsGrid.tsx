@@ -20,7 +20,7 @@ import {
 import { siteConfig } from '@/config/site';
 
 // 4 Distinct Dope Wavy Sparkline Datasets for High-Signal Visual Fluidity
-const inventoryValuationTrend = [
+const documentIngestionTrend = [
   { t: 'Jan', v: 24.2 },
   { t: 'Mar', v: 28.5 },
   { t: 'May', v: 26.8 },
@@ -62,16 +62,16 @@ const turnaroundVelocityTrend = [
 
 // High-Density Multi-Agent Context Bus Telemetry Timeline (Dope Fluid Waves)
 const telemetryStream = [
-  { time: '09:00', ops: 3820, latency: 14.8, stage: 'Asset Intake & CAD Audit' },
-  { time: '10:00', ops: 4790, latency: 14.1, stage: 'FMV Valuation Synthesizer' },
-  { time: '11:00', ops: 4210, latency: 13.9, stage: 'Brand Affinity & Exclusivity' },
-  { time: '12:00', ops: 5680, latency: 14.4, stage: 'Category Exclusivity Guard' },
-  { time: '13:00', ops: 5120, latency: 13.8, stage: 'Executive Pitch Deck Synth' },
-  { time: '14:00', ops: 6450, latency: 13.2, stage: 'Sponsorship CRM Stage Gate' },
-  { time: '15:00', ops: 5890, latency: 13.5, stage: 'Contract Schedule Drafting' },
-  { time: '16:00', ops: 6820, latency: 12.8, stage: 'Partner Portal Live Feed' },
-  { time: '17:00', ops: 6180, latency: 13.4, stage: 'Obligation Delivery Verifier' },
-  { time: '18:00', ops: 6450, latency: 13.2, stage: 'Human Signoff Confirmed' },
+  { time: '09:00', ops: 3820, latency: 14.8, stage: 'PACER Brief Document Ingestion' },
+  { time: '10:00', ops: 4790, latency: 14.1, stage: 'Rule 5.2 Federal Redactor' },
+  { time: '11:00', ops: 4210, latency: 13.9, stage: 'OCR Document Layout Parsing' },
+  { time: '12:00', ops: 5680, latency: 14.4, stage: 'Bates Stamp Sequential Indexer' },
+  { time: '13:00', ops: 5120, latency: 13.8, stage: 'Case Exhibit Bundle Compiler' },
+  { time: '14:00', ops: 6450, latency: 13.2, stage: 'HIPAA Patient Log Scrub' },
+  { time: '15:00', ops: 5890, latency: 13.5, stage: 'GraphQL Case Record Sync' },
+  { time: '16:00', ops: 6820, latency: 12.8, stage: 'NIST AI RMF Compliance Audit' },
+  { time: '17:00', ops: 6180, latency: 13.4, stage: 'Inngest Background Event Dispatch' },
+  { time: '18:00', ops: 6450, latency: 13.2, stage: 'Human In The Loop Signoff' },
 ];
 
 export function MetricsGrid() {
@@ -102,12 +102,12 @@ export function MetricsGrid() {
     if (!mounted) return null;
 
     if (idx === 0) {
-      // Card 0: Inventory FMV growth curve (Stripe Blurple wavy gradient area)
+      // Card 0: Document Ingestion Growth Curve
       return (
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart data={inventoryValuationTrend} margin={{ top: 2, right: 2, left: 2, bottom: 0 }}>
+          <AreaChart data={documentIngestionTrend} margin={{ top: 2, right: 2, left: 2, bottom: 0 }}>
             <defs>
-              <linearGradient id="fmvGrad" x1="0" y1="0" x2="0" y2="1">
+              <linearGradient id="docIngestGrad" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#533AFD" stopOpacity={0.35} />
                 <stop offset="100%" stopColor="#533AFD" stopOpacity={0.0} />
               </linearGradient>
@@ -118,7 +118,7 @@ export function MetricsGrid() {
                 if (active && payload && payload.length) {
                   return (
                     <div className="rounded-[4px] bg-[var(--color-surface)] border border-[var(--color-border)] px-2.5 py-1 text-xs font-medium shadow-xs text-[var(--color-text-primary)]">
-                      <span className="font-bold text-[#533AFD] dark:text-[#7A68FF]">${payload[0].value}M</span> FMV
+                      <span className="font-bold text-[#533AFD] dark:text-[#7A68FF]">{payload[0].value}k</span> Documents
                     </div>
                   );
                 }
@@ -130,7 +130,7 @@ export function MetricsGrid() {
               dataKey="v"
               stroke="#533AFD"
               strokeWidth={2}
-              fill="url(#fmvGrad)"
+              fill="url(#docIngestGrad)"
             />
           </AreaChart>
         </ResponsiveContainer>

@@ -173,15 +173,15 @@ export function StripeHero({
                 ))}
               </div>
 
-              {/* Interactive Video Stream Simulator */}
+              {/* Interactive Document Stream Simulator */}
               <div className="pt-2">
                 <div className="rounded-lg bg-[#0A0D14] text-slate-200 p-3.5 space-y-2.5 border border-slate-800">
                   <div className="flex items-center justify-between text-xs text-slate-300 pb-1.5 border-b border-slate-800">
                     <span className="flex items-center gap-2 font-medium">
                       <Radio className="w-3.5 h-3.5 text-[#00D4FF] animate-pulse" />
-                      HLS CDN Stream Buffer
+                      OCR Ingest Stream Buffer
                     </span>
-                    <span className="font-mono text-xs text-slate-400">{simulatedChunks} / 24 Chunks</span>
+                    <span className="font-mono text-xs text-slate-400">{simulatedChunks} / 24 Pages</span>
                   </div>
 
                   {/* Buffer Progress Bar */}
@@ -194,7 +194,7 @@ export function StripeHero({
 
                   <div className="flex items-center justify-between pt-1">
                     <span className="text-xs text-slate-300">
-                      Throughput: <strong className="text-emerald-400 font-semibold">48.2 MB/s</strong>
+                      Throughput: <strong className="text-emerald-400 font-semibold">12,840 pgs/min</strong>
                     </span>
                     <button
                       type="button"
@@ -205,12 +205,12 @@ export function StripeHero({
                       {streamSimulating ? (
                         <>
                           <RefreshCw className="w-3 h-3 animate-spin" />
-                          Streaming...
+                          Ingesting...
                         </>
                       ) : (
                         <>
                           <Play className="w-3 h-3" />
-                          Simulate Stream
+                          Simulate Ingest
                         </>
                       )}
                     </button>
@@ -222,9 +222,9 @@ export function StripeHero({
               <div className="flex items-center justify-between text-xs text-[var(--color-text-secondary)] pt-1 font-medium">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#00D924]" />
-                  Replit Socket Bottleneck Fixed
+                  High-Latency Bottleneck Fixed
                 </span>
-                <span className="text-[var(--color-text-muted)]">PgBouncer + Redis</span>
+                <span className="text-[var(--color-text-muted)]">Postgres + Regional Cache</span>
               </div>
             </div>
           </div>
