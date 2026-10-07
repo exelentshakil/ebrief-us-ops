@@ -3,6 +3,8 @@ code: https://github.com/exelentshakil/ebrief-us-ops | portfolio: https://shakil
 
 it handles raw us filing ingestion, federal rule 5.2 redaction, and medical hipaa scrubbing. the codebase is ready in the github link above.
 
+while my main background is years of senior Laravel development, the concepts of active record, database migrations, and MVC are second nature to me. the ruby transition is just a minor syntax translation—with ai leverage, i am fully operational on your rails codebase in hours.
+
 to solve the reliability issue that broke your previous vapi integration, i set up a dual-provider routing pipeline with active gpt-4o-mini and gemini 2.0 failovers alongside a deterministic verification layer. it intercepts prompt injection jailbreaks and handles compliance checks before the llm is even exposed.
 
 at $75/hr for 30+ hours/week, i run autonomous weekly sprints with daily github commits, nix builds, and zero handholding:
